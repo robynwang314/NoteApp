@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 class NoteCard extends React.Component {
   render() {
-    const { note, getNote } = this.props;
+    const { note, getNote, deleteNote } = this.props;
 
     return (
       <div className="note-card-container">
@@ -13,7 +13,7 @@ class NoteCard extends React.Component {
         <div className="note-card-content">
           {note.content}
         </div>
-        <span className="note-card-delete">
+        <span className="note-card-delete" onClick={() => deleteNote(note.id)}>
           <i className="material-icons">close</i>
         </span>
         <span className="note-card-edit" onClick={() => getNote(note.id)}>
