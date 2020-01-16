@@ -11,6 +11,12 @@
     this.props.submitNote(formData, this.props.note.id);
   }
 
+  onTagSubmit(e) {
+    e.preventDefault();
+    console.log(this.name.value);
+    this.props.closeTagForm();
+  }
+
   renderTagForm() {
     if (!this.props.newTag) {
       return (
@@ -24,7 +30,18 @@
           </i>
         </span>
       );
-    }  
+    }  else {
+      return (
+        <form onSubmit={(e) => this.onTagSubmit(e)}>
+          <input 
+            className="tag-input"
+            type="text"
+            placeholder="Tag Name..."
+            ref={(input) => this.name = input}
+          />
+        </form> 
+      );
+    }
   };
 
   render () {
