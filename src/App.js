@@ -11,7 +11,8 @@ class App extends Component {
     super();
     this.state = {
       showNote: false,
-      notes: []
+      notes: [],
+      note: {}
     };
   }
 
@@ -24,11 +25,13 @@ class App extends Component {
   getNotes = () => {
     axios.get(urlFor('notes'))
     .then((res) => this.setState({ notes: res.data}) )
-    .catch((err) => console.log(err.resonse.data) );
+    .catch((err) => console.log(err.response.data) );
   } 
 
-  getNote = () => {
-    console.log('Clicked!');
+  getNote = (id) => {
+    axios.get(urlFor(`notes/${id}`))
+    .then((res) => this.setState({ note: res.data, showNote: true }) )
+    .catch((err) => console.log(err.response.data) );
   }
 
   render() {
