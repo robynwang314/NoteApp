@@ -57,8 +57,8 @@ Add /notes to the end of the URL the previous command spit out to view a working
 <pre>https://note-api-your-unique-name.herokuapp.com/notes</pre>
 
 ### Set Up Development Environment ###
-Install <a href="https://github.com/nvm-sh/nvm">NVM</a>
-Install Node and NPM
+Install <a href="https://github.com/nvm-sh/nvm">NVM</a><br/>
+Install Node and NPM<br/>
 Install Yarn 
 
 ### Set Up Front End ###
