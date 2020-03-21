@@ -58,8 +58,9 @@ Add /notes to the end of the URL the previous command spit out to view a working
 
 ### Set Up Development Environment ###
 Install <a href="https://github.com/nvm-sh/nvm">NVM</a><br/>
-Install Node and NPM<br/>
+Install <a href="https://www.npmjs.com/get-npm">Node and NPM</a><br/>
 Install Yarn 
+<pre>$ npm install yarn -g</pre>
 
 ### Set Up Front End ###
 Install React Using NPM
